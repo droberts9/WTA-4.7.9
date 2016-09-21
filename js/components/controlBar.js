@@ -159,6 +159,22 @@ var ControlBar = React.createClass({
       this.closeQualityPopover();
     }
   },
+  
+   // Start --> DRoberts Adding Facebook and Twitter button functions
+    handleFacebookClick: function() {
+    var facebookUrl = "http://www.facebook.com/sharer.php";
+    facebookUrl += "?u=" + encodeURIComponent(location.href);
+    window.open(facebookUrl, "facebook window", "height=315,width=780");
+  },
+  
+  
+  handleTwitterClick: function() {
+    var twitterUrl = "https://twitter.com/intent/tweet";
+    twitterUrl += "?text=" + encodeURIComponent(this.props.contentTree.title+": ");
+    twitterUrl += "&url=" + encodeURIComponent(location.href);
+    window.open(twitterUrl, "twitter window", "height=300,width=750");
+  },
+  // End - DRoberts Ending FaceBook and Twitter button functions
 
   //TODO(dustin) revisit this, doesn't feel like the "react" way to do this.
   highlight: function(evt) {
@@ -308,6 +324,16 @@ var ControlBar = React.createClass({
       </a>,
 
       "flexibleSpace": <div className="oo-flexible-space oo-control-bar-flex-space" key="flexibleSpace"></div>,
+
+ // START DRoberts Add Facebook and Twitter Buttons    
+    "facebook": <button className="oo-facebook oo-controlBarItem"
+        onClick={this.handleFacebookClick} key="facebook">
+      </button>,
+	  
+	  "twitter": <button className="oo-twitter oo-controlBarItem"
+        onClick={this.handleTwitterClick} key="twitter">
+      </button>,
+	  // END DRoberts Add Facebook and Twitter Buttons 
 
       "moreOptions": <a className="oo-more-options oo-control-bar-item"
         onClick={this.handleMoreOptionsClick} key="moreOptions">
