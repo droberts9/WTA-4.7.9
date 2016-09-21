@@ -178,6 +178,30 @@ a.oo-volume-bar {
   width: $slider-volume-width;
 }
 
+  .oo-social-icon {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    margin-bottom: $panel-padding/2;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	border: 0px;
+  }
+
+  .oo-facebook {
+    @extend .oo-social-icon;
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-facebook.svg");
+	background-color: transparent;
+  }
+
+  .oo-twitter {
+    @extend .oo-social-icon;
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-twitter.svg");
+	background-color: transparent;
+  }
+
 // IE 11 only
 @include apply-to-ie11-only ('.oo-volume-slider') {
   height: auto;
