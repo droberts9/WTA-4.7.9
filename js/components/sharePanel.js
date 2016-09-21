@@ -29,7 +29,7 @@ var SharePanel = React.createClass({
       return (
         <div className="oo-share-tab-panel">
           <div className="oo-social-action-text oo-text-capitalize">{titleString}</div>
-          <a className="oo-twitter" onClick={this.handleTwitterClick}> </a>
+          <a className="oo-pinterest" onClick={this.handlePinterestClick}> </a>
           <a className="oo-facebook" onClick={this.handleFacebookClick}> </a>
           <a className="oo-google-plus" onClick={this.handleGPlusClick}> </a>
           <a className="oo-email-share" onClick={this.handleEmailClick}> </a>
@@ -49,7 +49,7 @@ var SharePanel = React.createClass({
 
       return (
         <div className="oo-share-tab-panel">
-          <textarea className="oo-form-control oo-embed-form"
+          <textarea className="oo-form-control"
                     rows="3"
                     value={iframeURL}
                     readOnly />
@@ -81,6 +81,15 @@ var SharePanel = React.createClass({
     var facebookUrl = "http://www.facebook.com/sharer.php";
     facebookUrl += "?u=" + encodeURIComponent(location.href);
     window.open(facebookUrl, "facebook window", "height=315,width=780");
+  },
+  
+     handlePinterestClick: function() {
+    var pinterestUrl = "https://pinterest.com/pin/create/bookmarklet/";
+	pinterestUrl += "?title=" + encodeURIComponent(this.props.contentTree.title+": ");
+	pinterestUrl += "&description=" + encodeURIComponent(this.props.contentTree.description+": ");
+	pinterestUrl += "&media=" + encodeURIComponent(this.props.contentTree.preview_image_url+": ");
+    pinterestUrl += "&url=" + encodeURIComponent(location.href); 
+    window.open(pinterestUrl, "pinterest window", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");
   },
 
   handleGPlusClick: function() {
