@@ -62,27 +62,27 @@
 
   .oo-facebook {
     @extend .oo-social-icon;
-    background-image: url("//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/social-facebook.svg");
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-facebook.svg");
   }
 
   .oo-twitter {
     @extend .oo-social-icon;
-    background-image: url("//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/social-twitter.svg");
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-twitter.svg");
   }
 
   .oo-google-plus {
     @extend .oo-social-icon;
-    background-image: url("//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/social-google.svg");
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-google.svg");
+  }
+  
+   .oo-pinterest {
+    @extend .oo-social-icon;
+    background-image: url("//steppin-stone-studios.com/ooyala/v4stage/wta/4x7x9/assets/images/Pinterest_circle.svg");
   }
 
   .oo-email-share {
     @extend .oo-social-icon;
-    background-image: url("//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/social-email.svg");
+    background-image: url("//player.ooyala.com/static/v4/stable/4.7.9/skin-plugin/assets/images/social-email.svg");
     background-size: cover;
-  }
-
-  .oo-embed-form {
-    resize: none;
-    height: calc(15vh);
   }
 }
